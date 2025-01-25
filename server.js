@@ -17,12 +17,12 @@ let config={
     password:"UjUskK4XvFRa1hVEe8Li",
     database:"btkwsdixga9umjpped5j",
     dateStrings:true,
-    KeepAliveInitialDelay: 10000,
+    KeepAliveInitialDelay : 10000,
     enableKeepAlive : true,
 }
 app.use (express.static("public"))
 var mysql=mysql2.createConnection(config);
-mysql.connect(function(err){
+mysql.connect(function(err){ 
     if(err==null)
     {
         console.log("connected to database successfully");
