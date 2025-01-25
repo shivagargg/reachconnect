@@ -35,7 +35,7 @@
                        // alert(JSON.stringify(jsonAry));
                         $("#iadd").val(jsonAry[0].fname);//table colu. wala
                         $("#ilast").val(jsonAry[0].lname);//table colu. wala
-                        $("#prevpic").prop("src","uploads/"+jsonAry[0].ppic);
+                        $("#prevpic").prop("src",jsonAry[0].ppic);
                         $("#hdn").val(jsonAry[0].ppic);
                         $("#igender").val(jsonAry[0].gender);
                         let rawdob =jsonAry[0].dob;
