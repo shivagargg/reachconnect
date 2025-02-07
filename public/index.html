@@ -59,8 +59,10 @@
             localStorage.setItem("activeuser",$("#txtEmaill").val())
           location.href="dashboard.html"
           }
-          else if (resp == "Client")
-          location.href="influ-finder.html"
+          else if (resp == "Client"){
+          localStorage.setItem("activeuser",$("#txtEmaill").val())
+          location.href="client-dash.html"
+          }
            else 
            alert(resp);
         }).fail(function(err)
@@ -96,7 +98,7 @@
 
   </div>
   <ul class="nav-links">
-    
+    <li><a href="/client-dash.html">Guest login</a></li>
     <li><a href="#" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Sign Up</a></li>
     <li><a href="#" data-bs-target="#exampleModallog"  data-bs-toggle="modal" >Log In</a></li>
