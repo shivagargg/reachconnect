@@ -21,8 +21,8 @@ let config={
     password:"UjUskK4XvFRa1hVEe8Li",
     database:"btkwsdixga9umjpped5j",
     dateStrings:true,
-    //KeepAliveInitialDelay : 10000,
-    enableKeepAlive : true,
+    keepAliveInitialDelay: 10000, 
+    enableKeepAlive: true, 
 }
 app.use (express.static("public"))
 var mysql=mysql2.createConnection(config);
