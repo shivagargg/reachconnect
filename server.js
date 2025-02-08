@@ -110,11 +110,11 @@ app.post("/curd-submit",async function(req,resp)
         {
             fileName=req.files.ppic.name;
             let path=__dirname+"/public/uploads/"+fileName;
-            //req.files.ppic.mv(path);
-            await cloudinary.uploader.upload(path)
-            .then(function(result){
-                fileName=result.url;
-            })
+            req.files.ppic.mv(path);
+            // await cloudinary.uploader.upload(path)
+            // .then(function(result){
+            //     fileName=result.url;
+            // })
         }
         else
         fileName="nopic.jpg";
@@ -125,7 +125,7 @@ app.post("/curd-submit",async function(req,resp)
     {
         
             if(err==null)
-                    resp.send("/");
+                resp.send("<script>window.location.href='/thankyou.html';</script>");
             else
                     resp.send(err.message);
     })
@@ -154,7 +154,9 @@ app.post("/curd-update",function(req,resp)
         if(err==null)//no error
         {
                if(result.affectedRows>=1) 
-                   resp.send("Updated  Successfulllyyyy....");
+                   //resp.send("Updated  Successfulllyyyy....");
+               resp.send("<script>window.location.href='/thankyou.html';</script>");
+
                 else
                     resp.send("Invalid Email ID");
         }

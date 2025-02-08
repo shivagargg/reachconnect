@@ -35,7 +35,9 @@
                        // alert(JSON.stringify(jsonAry));
                         $("#iadd").val(jsonAry[0].fname);//table colu. wala
                         $("#ilast").val(jsonAry[0].lname);//table colu. wala
-                        $("#prevpic").prop("src",jsonAry[0].ppic);
+                       // $("#prevpic").prop("src",jsonAry[0].ppic);
+                        $("#prevpic").prop("src", "/uploads/" + jsonAry[0].ppic);
+
                         $("#hdn").val(jsonAry[0].ppic);
                         $("#igender").val(jsonAry[0].gender);
                         let rawdob =jsonAry[0].dob;
@@ -75,7 +77,7 @@
         <input type="email" class="form-control" id="inputEmail4" name="inputEmail4" readonly>
     </div>
     <div class="col-md-1" style="padding-top: 35px;">
-        <button type="button" id="btnsearch" class="btn btn-primary w-100 h-100" ">Search</button>
+        <button type="button" id="btnsearch" class="btn btn-primary w-100 h-100">Search</button>
     </div>
     <div class="col-md-6 d-flex align-items-center">
         <div class="me-3">
